@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CeoImage from "../../assets/images/intro/first-image.webp";
+import CeoImage from "../../assets/images/intro/first-image.jpeg";
 
 const SectionContainer = styled.div`
   background-color: #fff;
@@ -28,13 +28,16 @@ const ContentContainer = styled.div`
 
 const ImageWrapper = styled.div`
   width: 300px;
-  height: auto;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 8px;
   flex-shrink: 0;
   margin-right: 5px;
 
   @media (max-width: 768px) {
     width: 100%;
     max-width: 250px;
+    height: 330px;
     margin-right: 0;
     margin: 0 auto;
   }
@@ -42,7 +45,9 @@ const ImageWrapper = styled.div`
 
 const CeoPhoto = styled.img`
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  object-position:  0% 100%;
 `;
 
 const TextWrapper = styled.div`
